@@ -47,5 +47,9 @@ namespace MudBlazor
         /// </summary>
         [Parameter] public string Label { get; set; }
 
+        /// <summary>
+        /// The placment of the icon if used.
+        /// </summary>
+        [Parameter] public Position IconPosition { get; set; } = Position.Left;
     }
 }

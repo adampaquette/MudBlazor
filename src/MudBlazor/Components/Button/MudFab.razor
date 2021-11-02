@@ -14,10 +14,17 @@
             rel="@(Target=="_blank"?"noopener":null)"
             disabled="@Disabled">
     <span class="mud-fab-label">
+		@if(IconPosition == Position.Right)
+		{
+			@Label
+		}
         @if (!string.IsNullOrWhiteSpace(Icon))
         {
-            <MudIcon Icon="@Icon" Color="@IconColor" Size="@IconSize"></MudIcon>
+            <MudIcon Icon="@Icon" Color="@IconColor" Size="@IconSize" ></MudIcon>
         }
-        @Label
+        @if(IconPosition == Position.Left)
+		{
+			@Label
+		}
     </span>
 </MudElement>
